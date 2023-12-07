@@ -1,0 +1,6 @@
+* @nxpkg
+
+# Configured through renovate.json
+package.json
+package-lock.json
+yarn.lock

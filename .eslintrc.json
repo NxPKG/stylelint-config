@@ -1,0 +1,6 @@
+{
+  "extends": ["@nx-pkg/eslint-config"],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  }
+}

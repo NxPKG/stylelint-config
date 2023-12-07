@@ -1,0 +1,4 @@
+{
+  "extends": ["github>nxpkg/renovate-config"],
+  "semanticCommits": true
+}

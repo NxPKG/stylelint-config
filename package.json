@@ -1,0 +1,45 @@
+{
+  "name": "@nx-pkg/stylelint-config",
+  "version": "0.0.0-DEVELOPMENT",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nxpkg/stylelint-config.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": ".stylelintrc.json",
+  "scripts": {
+    "semantic-release": "semantic-release",
+    "prettier": "prettier '**/*.{js?(on),ts?(x),scss,yml}' --write --list-different",
+    "prettier-check": "npm run prettier -- --write=false"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@nx-pkg/eslint-config": "0.0.0-DEVELOPMENT",
+    "@nx-pkg/prettierrc": "^3.0.3",
+    "@nx-pkg/tsconfig": "^4.0.1",
+    "eslint": "^8.55.0",
+    "husky": "^5.0.9",
+    "prettier": "^2.5.1",
+    "semantic-release": "^17.3.9",
+    "stylelint": "^15.11.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  }
+}
